@@ -38,6 +38,8 @@ grep -A2 hoge target.txt
 for file in $(find . -maxdepth 1 -type f|grep -v .md) ; do  
     echo "$file";
     sleep 10 & 
+    #エラーになるコマンドがあってもfor-loop事態は続く。止めたければreturn-codeをチェックしてbreakさせる
+    #python --he
 done
 
 ./.gitignore
